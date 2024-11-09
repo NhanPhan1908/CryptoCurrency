@@ -9,7 +9,7 @@ data class Cryptocurrency(
     val symbol: String,
     val marketCap: Double,
     val quote: Quote,
-    val amount: Double // Bạn có thể đặt mặc định là 0.0 nếu không cần
+    val amount: Double
 ) {
     val imageResource: Int
         get() = when (name) {

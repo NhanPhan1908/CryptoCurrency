@@ -27,19 +27,10 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:layout_weight="1"
             android:layout_gravity="center_vertical" />
-
-        <ImageButton
-            android:id="@+id/button_back"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:src="@drawable/baseline_more_vert_24"
-            android:background="?android:selectableItemBackgroundBorderless"
-            android:contentDescription="Back"
-            android:layout_gravity="center_vertical" />
-    </LinearLayout>
+    </LinearLayout>en
 
     <!-- Avatar -->
     <ImageView
@@ -58,7 +49,7 @@
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="John Doe"
+        android:text="Phan Đăng Nhân"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -71,7 +62,7 @@
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="john.doe@gmail.com"
+        android:text="phandangnhan@gmail.com"
         android:textSize="14sp"
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/tvName"
@@ -94,7 +85,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:drawablePadding="8dp"
-            android:text="User" />
+            android:text="User"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/btnPrivacy"
@@ -103,16 +95,8 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/button"
             android:drawablePadding="8dp"
-            android:text="Privacy" />
-
-        <Button
-            android:id="@+id/btnLanguage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/button"
-            android:drawablePadding="8dp"
-            android:text="Language" />
+            android:text="Privacy"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/btnSignOut"
@@ -121,6 +105,7 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/button"
             android:drawablePadding="8dp"
-            android:text="Sign Out" />
+            android:text="Sign Out"
+            android:textColor="@android:color/black"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

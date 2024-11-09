@@ -11,7 +11,7 @@
         android:id="@+id/pic"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:src="@drawable/btc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="BTC"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/pic"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +37,6 @@
         android:id="@+id/amountTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1.45 BTC"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/textViewName"
         app:layout_constraintTop_toTopOf="parent"
@@ -51,12 +50,12 @@
         android:layout_height="wrap_content"
         android:text="$00,000.0"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/amountTxt"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="32dp" />
+        android:layout_marginStart="8dp" />
 
     <!-- Phần trăm thay đổi của đồng coin (Ví dụ: +2.5%) -->
 
@@ -64,10 +63,10 @@
         android:id="@+id/percentTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="45dp"
         android:text="+2.5%"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.279"
@@ -78,12 +77,13 @@
         android:id="@+id/textViewMarketCap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
         android:text="+2.5%"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/percentTxt"
+
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@ import com.example.cryptocurrency.domain.Cryptocurrency
 class CryptocurrencyAdapter(private var coinList: List<Cryptocurrency>) :
     RecyclerView.Adapter<CryptocurrencyAdapter.CoinViewHolder>() {
 
-    // ViewHolder đại diện cho mỗi item
+    // Thiết lập dữ liệu cho các thành phần trong item layout
     class CoinViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val coinNameTextView: TextView = itemView.findViewById(R.id.textViewName)
         val coinAmountTextView: TextView = itemView.findViewById(R.id.amountTxt)
@@ -31,21 +31,17 @@ class CryptocurrencyAdapter(private var coinList: List<Cryptocurrency>) :
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
         val coin = coinList[position]
 
-        // Thiết lập dữ liệu cho các thành phần trong item layout
+        //set up data for component in item layout
         holder.coinNameTextView.text = coin.name
         holder.coinAmountTextView.text = String.format("%.2f %s", coin.amount, coin.symbol)
         holder.coinBalanceTextView.text = String.format("$%,.2f", coin.price)
         holder.coinChangeTextView.text = String.format("%.2f%%", coin.percentChange)
-
-        // Đặt hình ảnh tương ứng
         holder.coinImageView.setImageResource(coin.imageResource)
-
-        // Nếu cần hiển thị market cap
         holder.coinMarketCapTextView.text = String.format("$%,.2f", coin.marketCap)
     }
 
     override fun getItemCount(): Int = coinList.size
-
+    //update newData from new Cryptocurrency
     fun updateData(newCoinList: List<Cryptocurrency>) {
         coinList = newCoinList
         notifyDataSetChanged()

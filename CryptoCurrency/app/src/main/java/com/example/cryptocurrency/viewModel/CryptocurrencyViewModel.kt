@@ -21,9 +21,10 @@ class CryptocurrencyViewModel : ViewModel() {
     fun fetchCryptocurrencies() {
         viewModelScope.launch {
             try {
-                // Gọi API bằng coroutine
                 val response: CoinMarketCapResponse = RetrofitInstance.api.getCryptocurrencyList()
+                //call API from Retrofit Instance
                 val cryptos = response.data.map { apiCrypto ->
+                    //change API data to Cryptocurrency object
                     Cryptocurrency(
                         name = apiCrypto.name,
                         price = apiCrypto.quote.USD.price,
